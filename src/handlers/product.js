@@ -34,10 +34,10 @@ module.exports = (req, res) => {
       });
    } else if (req.pathname === '/products/add' && req.method === 'POST') {
       let form = new multiparty.Form();
-      let products = {};
+      let product = {};
 
-      form.on('part', p => {
-         if (p.filename) {
+      form.on('part', part => {
+         if (part.filename) {
             let dataString = '';
 
             part.setEncoding('binary');
@@ -51,7 +51,7 @@ module.exports = (req, res) => {
                let extension = part.filename.substring(part.filename.lastIndexOf('.'));
                let filePath = `/content/images/${filename}${extension}`;
 
-               products.image = filePath;
+               product.image = filePath;
 
                fs.writeFile(`.${filePath}`, dataString, { encoding: 'ascii' }, (err) => {
                   if (err) {
@@ -84,7 +84,7 @@ module.exports = (req, res) => {
          res.end();
       });
 
-      form.parse(req);
+      form.parse(req); 
    } else {
       return true;
    }

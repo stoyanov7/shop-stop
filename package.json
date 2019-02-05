@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/stoyanov7/shop-stop/issues"
   },
-  "homepage": "https://github.com/stoyanov7/shop-stop#readme"
+  "homepage": "https://github.com/stoyanov7/shop-stop#readme",
+  "dependencies": {
+    "multiparty": "^4.2.1",
+    "shortid": "^2.2.14"
+  }
 }
