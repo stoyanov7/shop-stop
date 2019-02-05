@@ -1,19 +1,19 @@
 let products = [];
 let count = 1;
 
-module.export.products = {};
+module.exports.products = {};
 
 /**
  * Get all the products.
  */
-module.export.products.getAll = () => {
+module.exports.products.getAll = () => {
      return products;
 };
 
 /**
  * Add product.
  */
-module.export.products.add = (product) => {
+module.exports.products.add = (product) => {
      product.id = count++;
      products.push(product);
 };
@@ -21,7 +21,7 @@ module.export.products.add = (product) => {
 /**
  * Find product by name.
  */
-module.export.products.findByName = (name) => {
+module.exports.products.findByName = (name) => {
      let product = null;
 
      for (const p of products) {
