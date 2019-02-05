@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/stoyanov7/shop-stop#readme",
   "dependencies": {
+    "gulp": "4.0.0",
+    "gulp-clean-css": "4.0.0",
+    "gulp-rename": "^1.4.0",
     "multiparty": "^4.2.1",
     "shortid": "^2.2.14"
   }
