@@ -80,10 +80,10 @@ module.exports = (req, res) => {
             });
 
             res.end();
-         });      
+         });
       });
 
-      form.parse(req); 
+      form.parse(req);
    } else {
       return true;
    }

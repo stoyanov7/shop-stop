@@ -14,6 +14,7 @@ module.exports = (config) => {
           console.log('Connected!');
      });
      require('../models/Product');
+     require('../models/Category');
 
      database.on('error', (err) => {
           console.log(err);
