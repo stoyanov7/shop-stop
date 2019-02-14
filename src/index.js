@@ -7,4 +7,7 @@ let app = express();
 let environment = process.env.NODE_ENV || 'development';
 
 databaseConfig(config[environment]);
+require('./config/express')(app, config[environment]);
+require('./config/routes')(app);
+
 app.listen(port);

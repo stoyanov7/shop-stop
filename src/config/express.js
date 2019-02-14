@@ -13,5 +13,12 @@ module.exports = (app, config) => {
      app.use(bodyParser.urlencoded({ extended: true }));
 
      // Configure "content" folder
-     app.use(express.static(path.normalize(path.join(config.rootPath, 'content'))));
+     app.use((req, res, next) => {
+          if (req.url.startsWith('/content')) {
+               req.url = req.url.replace('/content', '');
+          }
+
+          next();
+     }, express.static(path.normalize(path.join(config.rootPath, 'content'))
+     ));
 };
