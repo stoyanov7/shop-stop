@@ -1,33 +1,23 @@
 {
-  "name": "shop-stop",
+  "name": "tasks",
   "version": "1.0.0",
-  "description": "“Shop Stop” is very simple product catalog website. The application will consist of users, products and categories. Each user can register, login and logout. Users also can create, buy, edit or delete a product. Each product has a category in which it is specified.",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/stoyanov7/shop-stop.git"
-  },
-  "keywords": [
-    "shop"
-  ],
-  "author": "Georgi Stoyanov <georgi.stoyanov777@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/stoyanov7/shop-stop/issues"
-  },
-  "homepage": "https://github.com/stoyanov7/shop-stop#readme",
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "1.18.3",
     "express": "4.16.4",
+    "express-handlebars": "3.0.0",
     "gulp": "4.0.0",
     "gulp-clean-css": "4.0.0",
-    "gulp-rename": "^1.4.0",
-    "mongoose": "^5.4.10",
-    "multer": "^1.4.1",
-    "multiparty": "^4.2.1",
-    "shortid": "^2.2.14"
+    "gulp-rename": "1.4.0",
+    "mongoose": "5.4.0",
+    "multer": "1.4.1",
+    "multiparty": "4.2.1",
+    "shortid": "2.2.14"
   }
 }
