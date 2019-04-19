@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 let categorySchema = mongoose.Schema({
     name: { type: mongoose.Schema.Types.String, required: true, unique: true },
-    // ref propert is reference to another Collection in the database
+    creator: { type: mongoose.Schema.Types.ObjectId, ref: 'User', require: true },
     products: [ { type: mongoose.Schema.Types.ObjectId, ref: 'Product' } ]
 });
 
